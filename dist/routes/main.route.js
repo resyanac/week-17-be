@@ -9,7 +9,7 @@ const task_route_1 = __importDefault(require("./task.route"));
 routes.get('/', (req, res) => {
     res.status(200).json({
         success: true,
-        message: 'Welcome to RPB rest API'
+        message: 'Welcome to week 15'
     });
 });
 routes.use('/', task_route_1.default);
