@@ -10,6 +10,7 @@ taskRoutes.get('/v1/tasks/:id',cors(clientAccess.limitedClient), getOneTask)
 taskRoutes.post('/v1/tasks', cors(clientAccess.limitedClient), createTask)
 
 taskRoutes.options('/v1/tasks/:id', cors(clientAccess.globalClient))
+taskRoutes.options('/v1/tasks/:id', cors(clientAccess.limitedClient))
 taskRoutes.options('/v1/tasks', cors(clientAccess.limitedClient))
 taskRoutes.patch('/v1/tasks/:id', cors(clientAccess.globalClient), updateTask)
 taskRoutes.delete('/v1/tasks/:id', cors(clientAccess.globalClient), deleteTask)
