@@ -7,8 +7,7 @@
     "start": "node dist/app.js",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/app.js\"",
     "test": "npx jest --detectOpenHandles",
-    "testcoverage": "jest --coverage",
-    "build": "node dist/app.js"
+    "testcoverage": "jest --coverage"
   },
   "keywords": [],
   "author": "",
