@@ -1,14 +1,14 @@
 import mongoose from "mongoose";
 
-const taskSchema = new mongoose.Schema({
-    task: {
+const taxSchema = new mongoose.Schema({
+    no: {
         type : String,
         required : true
     },
     status: {
         type: String,
-        default: "Not started",
-        enum: ['Not started', 'In progress', 'In review', 'Done / Approved', 'Need revision/ Rejected']
+        default: "Tertunggak",
+        enum: ['Tertunggak', 'Tertagih']
     },
     isDeleted: {
         type: Boolean
@@ -20,4 +20,4 @@ const taskSchema = new mongoose.Schema({
     versionKey: false
 })
 
-export const taskModel = mongoose.model("tasks", taskSchema);
+export const taxModel = mongoose.model("taxes", taxSchema);

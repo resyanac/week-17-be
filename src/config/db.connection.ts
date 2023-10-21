@@ -1,8 +1,9 @@
-import dbConfig from './db.config';
-import mongoose from 'mongoose';
 
-// DB Local
-// mongoose.connect('mongodb://127.0.0.1:27017/week10',
+import mongoose from 'mongoose';
+// import dbConfig from './db.config';
+
+// db Local
+// mongoose.connect('mongodb://127.0.0.1:27017/work',
 //   {
 //     useNewUrlParser: true,
 //     useUnifiedTopology: true
@@ -10,7 +11,7 @@ import mongoose from 'mongoose';
 // );
 
 // DB Atlas
-mongoose.connect(`mongodb+srv://${dbConfig.username}:${dbConfig.password}@${dbConfig.cluster}.mongodb.net/${dbConfig.dbname}?retryWrites=true&w=majority`, 
+mongoose.connect('mongodb+srv://resyanac:Resyaa21@cluster21.guz7tco.mongodb.net/?retryWrites=true&w=majority', 
   {
     useNewUrlParser: true,
     useUnifiedTopology: true

@@ -1,15 +1,19 @@
 import express from 'express'
 import { Request, Response } from 'express'
 const routes = express.Router()
-import taskRoutes from './task.route'
+import taxRoutes from './tax.route'
+import userRoutes from './user.route'
+// import authenticationMiddleware from '../middlewares/authentication-middleware'
+
 
 routes.get('/', (req: Request, res : Response) => {
     res.status(200).json({
         success: true,
-        message: 'Welcome to week 15'
+        message: 'Welcome to week 17'
     })
 })
 
-routes.use('/', taskRoutes)
+routes.use('/', taxRoutes)
+routes.use('/', userRoutes)
 
 export default routes;
