@@ -13,7 +13,6 @@ app.use(express.json());
 
 app.use(cors({
   origin: 'https://week17-resyanac-28999.web.app', // your frontend's URL
-  credentials: false,
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   allowedHeaders: ['Content-Type', 'Authorization'], // to support session cookie
 }));

@@ -13,7 +13,6 @@ const port = process.env.PORT || 3000;
 app.use(express_1.default.json());
 app.use((0, cors_1.default)({
     origin: 'https://week17-resyanac-28999.web.app',
-    credentials: false,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: ['Content-Type', 'Authorization'], // to support session cookie
 }));
