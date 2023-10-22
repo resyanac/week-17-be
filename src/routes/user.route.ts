@@ -1,10 +1,7 @@
 import express from 'express'
 
 import { register, login, logout } from '../controllers/user.controller'
-import LoginLimiter from '../middlewares/rateLimit'
-// import taxRoutes from './tax.route'
-import cors from 'cors'
-import corsMiddleware from '../middlewares/cors'
+
 
 const userRoutes = express.Router()
 

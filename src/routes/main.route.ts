@@ -3,7 +3,7 @@ import { Request, Response } from 'express'
 const routes = express.Router()
 import taxRoutes from './tax.route'
 import userRoutes from './user.route'
-// import authenticationMiddleware from '../middlewares/authentication-middleware'
+
 
 
 routes.get('/', (req: Request, res : Response) => {
