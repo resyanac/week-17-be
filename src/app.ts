@@ -5,35 +5,26 @@ import { db } from './config/db.connection';
 import cookieParser from 'cookie-parser'; 
 import cors from 'cors';
 
-
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
 const corsOptions = {
-  origin: ['https://week17-resyanac-28999.web.app', 'http//localhost:5173'],
+  origin: ['https://week17-resyanac-28999.web.app', 'http://localhost:5173'],
   credentials: true, 
   methods: ["GET", "POST", "DELETE", "PUT", "PATCH"]
 };
-
-app.all('/', function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    next()
-  });
 
 app.use(cors(corsOptions));
 app.use(cookieParser());
 
 app.use(routes);
+
 app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
     console.error(err.stack);
     res.status(500).send('Something broke!');
 });
-
-
-
 
 db.on('error', console.error.bind(console, 'connection error: '));
 db.once('open', function () {
