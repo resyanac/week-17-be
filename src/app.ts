@@ -14,11 +14,12 @@ app.use(express.json());
 // app.use(cors({
 //     origin: "http://localhost:5173",
 //     credentials: true,
-//     methods: ["GET", "POST", "DELETE", "PUT", "PATCH", "OPTIONS", "HEAD"]
+    
 // }));
 const corsOptions = {
   origin: ['https://week17-resyanac.web.app', 'https://week17-resyanac.web.app/*', 'http//localhost:5173'],
   credentials: true, // This allows the cookies to be sent
+  methods: ["GET", "POST", "DELETE", "PUT", "PATCH", "OPTIONS", "HEAD"]
 };
 
 app.use(cors(corsOptions));
