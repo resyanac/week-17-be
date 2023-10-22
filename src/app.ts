@@ -17,7 +17,7 @@ app.use(express.json());
 //     methods: ["GET", "POST", "DELETE", "PUT", "PATCH", "OPTIONS", "HEAD"]
 // }));
 const corsOptions = {
-  origin: 'http://localhost:5173',
+  origin: ['https://week17-resyanac.web.app', 'http//localhost:5173'],
   credentials: true, // This allows the cookies to be sent
 };
 
