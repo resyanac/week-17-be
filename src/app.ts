@@ -12,7 +12,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 const corsOptions = {
-  origin: ['https://week17-resyanac.web.app', 'http//localhost:5173'],
+  origin: ['https://week17-resyanac-28999.web.app', 'http//localhost:5173'],
   credentials: true, 
   methods: ["GET", "POST", "DELETE", "PUT", "PATCH"]
 };
