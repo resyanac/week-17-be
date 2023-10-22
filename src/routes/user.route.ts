@@ -12,8 +12,8 @@ const userRoutes = express.Router()
 
 
 userRoutes.options('/v1/register')
-userRoutes.options('/v1/login', )
-userRoutes.options('/v1/logout', )
+userRoutes.options('/v1/login' )
+userRoutes.options('/v1/logout' )
 userRoutes.post('/v1/register', register);
 userRoutes.post('/v1/login',  login);
 userRoutes.post('/v1/logout',  logout)
