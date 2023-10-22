@@ -2,7 +2,7 @@ import express from 'express';
 import 'dotenv/config';
 import routes from './routes/main.route';
 import { db } from './config/db.connection';
-import cookieParser from 'cookie-parser'; 
+
 import cors from 'cors';
 
 const app = express();
@@ -13,10 +13,10 @@ app.use(express.json());
 
 app.use(cors({
   origin: 'https://week17-resyanac-28999.web.app', // your frontend's URL
-  credentials: true, // to support session cookie
+  credentials: false, // to support session cookie
 }));
 
-app.use(cookieParser());
+
 
 app.use(routes);
 
