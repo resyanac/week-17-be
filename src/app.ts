@@ -2,8 +2,8 @@ import express from 'express';
 import 'dotenv/config';
 import routes from './routes/main.route';
 import { db } from './config/db.connection';
-// import cookieParser from 'cookie-parser'; 
-// import cors from 'cors';
+import cookieParser from 'cookie-parser'; 
+import cors from 'cors';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -11,9 +11,12 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 
+app.use(cors({
+  origin: 'https://week17-resyanac-28999.web.app', // your frontend's URL
+  credentials: true, // to support session cookie
+}));
 
-// app.use(cors())
-// app.use(cookieParser());
+app.use(cookieParser());
 
 app.use(routes);
 
