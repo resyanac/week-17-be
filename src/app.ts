@@ -17,6 +17,12 @@ const corsOptions = {
   methods: ["GET", "POST", "DELETE", "PUT", "PATCH"]
 };
 
+app.all('/', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    next()
+  });
+
 app.use(cors(corsOptions));
 app.use(cookieParser());
 
