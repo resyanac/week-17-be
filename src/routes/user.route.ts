@@ -5,6 +5,7 @@ import { register, login, logout } from '../controllers/user.controller'
 
 const userRoutes = express.Router()
 
+userRoutes.options('/v1/')
 userRoutes.options('/v1/register')
 userRoutes.options('/v1/login')
 userRoutes.options('/v1/logout')
