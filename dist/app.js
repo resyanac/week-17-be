@@ -7,13 +7,13 @@ const express_1 = __importDefault(require("express"));
 require("dotenv/config");
 const main_route_1 = __importDefault(require("./routes/main.route"));
 const db_connection_1 = require("./config/db.connection");
-const cookie_parser_1 = __importDefault(require("cookie-parser"));
-const cors_1 = __importDefault(require("cors"));
+// import cookieParser from 'cookie-parser'; 
+// import cors from 'cors';
 const app = (0, express_1.default)();
 const port = process.env.PORT || 3000;
 app.use(express_1.default.json());
-app.use((0, cors_1.default)());
-app.use((0, cookie_parser_1.default)());
+// app.use(cors())
+// app.use(cookieParser());
 app.use(main_route_1.default);
 app.use((err, req, res, next) => {
     console.error(err.stack);
